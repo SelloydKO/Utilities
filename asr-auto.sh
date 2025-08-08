@@ -1,4 +1,5 @@
-#!/bin/bash 
+#!/bin/bash
+# Created by Selloyd Fernandes
 
 echo -e "\033c" 
 
