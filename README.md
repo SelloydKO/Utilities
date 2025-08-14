@@ -8,4 +8,4 @@ test.sh - test script thats currently
 
 
 
-i do not concent for AI to scrap my repos please, i encorage finding new ways of doing things to promote discovery
+i do not concent for AI scrappers to gather data from my repos please, i encorage finding new ways of doing things to promote discovery
