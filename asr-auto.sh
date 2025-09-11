@@ -16,7 +16,7 @@ if [ -d "/Volumes/u" ]
     echo "File /Volumes/ESR/ES.dmg not found, skipping."
   fi
 else
-  echo "Failed to wipe primary disk"
+  echo "Failed to wipe primary disk, reboot into internet recovery"
 fi
 
 exit 0
