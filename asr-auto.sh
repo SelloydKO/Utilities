@@ -5,12 +5,18 @@ echo -e "\033c"
 
 diskutil erasedisk APFS u /dev/disk0
 
-if [ -f "/Volumes/ESR/ES.dmg" ]
+if[-d "/Volumes/u"]
 then
-  asr -s "/Volumes/ESR/ES.dmg" -t "/Volumes/u" --noprompt --erase
-  reboot
+ if [ -f "/Volumes/ESR/ES.dmg" ]
+ then
+   # asr -s "/Volumes/ESR/ES.dmg" -t "/Volumes/u" --noprompt --erase
+   echo "ASR image here"
+   reboot
+ else
+   echo "File /Volumes/ESR/ES.dmg not found, skipping."
+ fi
 else
-  echo "File /Volumes/ESR/ES.dmg not found, skipping."
+  echo "Failed to wipe primary disk"
 fi
 
 exit 0
