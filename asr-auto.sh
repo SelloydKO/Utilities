@@ -5,12 +5,12 @@ echo -e "\033c"
 
 diskutil erasedisk APFS u /dev/disk0
 
-if[-d "/Volumes/u"]
+if [ -d "/Volumes/u" ]
 then
+ echo "Onwards to ASR"
  if [ -f "/Volumes/ESR/ES.dmg" ]
  then
-   # asr -s "/Volumes/ESR/ES.dmg" -t "/Volumes/u" --noprompt --erase
-   echo "ASR image here"
+   asr -s "/Volumes/ESR/ES.dmg" -t "/Volumes/u" --noprompt --erase
    reboot
  else
    echo "File /Volumes/ESR/ES.dmg not found, skipping."
