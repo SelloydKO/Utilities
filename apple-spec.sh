@@ -9,7 +9,7 @@ tput reset
 
     # Power and Hardware information
     echo -e "\033[1mBattery Info:\033[0m";
-    system_profiler SPPowerDataType | grep -E "Maximum Capacity|Cycle Count|Condition";
+    system_profiler SPPowerDataType | grep -E "Maximum Capacity|Cycle Count|Condition|Processor";
 
 
     system_profiler SPHardwareDataType | grep -E "Serial Number|Chip|Cores|Memory";
