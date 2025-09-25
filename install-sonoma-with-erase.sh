@@ -9,7 +9,7 @@ if [ -d "/Volumes/Install macOS Sonoma" ]
 then
   /Volumes/Install\ macOS\ Sonoma/Install\ macOS\ Sonoma.app/Contents/macOS/InstallAssistant 
 else
-  echo "Image /Volumes/ESR/Install macOS Sonoma/ not found."
+  echo "Volume - Install macOS Sonoma not found."
 fi
 
 exit 0
