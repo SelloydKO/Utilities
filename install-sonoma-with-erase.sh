@@ -7,7 +7,7 @@ diskutil erasedisk APFS untitled /dev/disk0
 
 if [ -d "/Volumes/Image Volume" ]
 then
-  /Volumes/Image\ Volume/Install\ macOS\ Sonoma.app/Contents/Resources/startosinstall --agreetolicense --nointeraction
+  /Volumes/Image\ Volume/Install\ macOS\ Sonoma.app/Contents/macOS/InstallAssistant 
 else
   echo "Volume - Install macOS Sonoma not found."
   echo "ignoring check to install sonoma"
