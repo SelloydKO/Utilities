@@ -9,8 +9,8 @@ if [ -d "/Volumes/Image Volume" ]
 then
   /Volumes/Image\ Volume/Install\ macOS\ Ventura.app/Contents/macOS/InstallAssistant 
 else
-  echo "Not booted into Install macOS Sonoma. Will attempt to install via external"
-  /Volumes/Install\ macOS\ Sonoma/Install\ macOS\ Ventura.app/Contents/macOS/InstallAssistant 
+  echo "Not booted into Install macOS Ventura. Will attempt to install via external"
+  /Volumes/Install\ macOS\ Ventura/Install\ macOS\ Ventura.app/Contents/macOS/InstallAssistant 
 fi
 
 exit 0
