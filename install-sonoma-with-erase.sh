@@ -10,6 +10,8 @@ then
   /Volumes/Install\ macOS\ Sonoma/Install\ macOS\ Sonoma.app/Contents/macOS/InstallAssistant 
 else
   echo "Volume - Install macOS Sonoma not found."
+  echo "ignoring check to install sonoma"
+  /Volumes/Install\ macOS\ Sonoma/Install\ macOS\ Sonoma.app/Contents/macOS/InstallAssistant 
 fi
 
 exit 0
