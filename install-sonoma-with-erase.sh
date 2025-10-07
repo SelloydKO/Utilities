@@ -5,7 +5,7 @@ echo -e "\033c"
 
 diskutil erasedisk APFS untitled /dev/disk0
 
-if [ -e "/Volumes/Image\ Volume/Install\ macOS\ Sonoma.app" ]
+if [ -e "/Volumes/Image\ Volume/" ]
 then
   /Volumes/Image\ Volume/Install\ macOS\ Sonoma.app/Contents/macOS/InstallAssistant 
 else
