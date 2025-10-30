@@ -10,7 +10,7 @@ diskutil erasedisk APFS untitled /dev/disk0
 } ||
 {
   echo "Will attempt to install via external"
-  /Volumes/Install\ macOS\ Sonoma/Install\ macOS\ Sequoia.app/Contents/macOS/InstallAssistant 
+  /Volumes/Install\ macOS\ Sequoia/Install\ macOS\ Sequoia.app/Contents/macOS/InstallAssistant 
 }
 
 exit 0
