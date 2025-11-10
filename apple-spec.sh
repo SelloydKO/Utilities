@@ -26,6 +26,9 @@ tput reset
     echo -e "\033[1mKeyboard Info:\033[0m";
     ioreg -l | grep "KeyboardLanguage";
 
+    # T2 info
+    sysctl -n machdep.cpu.brand_string;
+
 } | awk -F '[:=]' '{
     gsub(/^ +| +$/, "   ", $1);
     gsub(/^ +| +$/, "   ", $2);
