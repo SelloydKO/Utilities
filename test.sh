@@ -29,7 +29,7 @@ tput reset
      # T2 info
     echo -e "\033[1mT2 Info:\033[0m";
     sysctl -n machdep.cpu.brand_string;
-    ioreg -l | grep -e "CurrentCapacity" -e "MaxCapacity"
+    ioreg -l | grep -e "AppleRawCurrentCapacity" -e "AppleRawMaxCapacity"
 
 } | awk -F '[:=]' '{
     gsub(/^ +| +$/, "   ", $1);
