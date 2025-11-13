@@ -26,6 +26,11 @@ tput reset
     echo -e "\033[1mKeyboard Info:\033[0m";
     ioreg -l | grep "KeyboardLanguage";
 
+     # T2 info
+    echo -e "\033[1mT2 Info:\033[0m";
+    sysctl -n machdep.cpu.brand_string;
+    ioreg -l | grep -e "CurrentCapacity" -e "MaxCapacity"
+
 } | awk -F '[:=]' '{
     gsub(/^ +| +$/, "   ", $1);
     gsub(/^ +| +$/, "   ", $2);
