@@ -1,0 +1,15 @@
+#!/bin/bash
+# Created by Selloyd Fernandes
+
+echo -e "\033c" 
+
+echo "Created By Selloyd"
+
+echo "Mounting Disk disk4"
+diskutil mountDisk /dev/disk4
+
+echo "Mounting Disk disk6"
+diskutil mountDisk /dev/disk6
+
+echo "Launching Application"
+/Volumes/BLANCCO/BEAD\ Agent/BEAD\ Agent.app/Contents/MacOS/BEAD\ Agent
