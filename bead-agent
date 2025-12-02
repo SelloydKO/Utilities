@@ -13,3 +13,5 @@ diskutil mountDisk /dev/disk6
 
 echo "Launching Application"
 /Volumes/BLANCCO/BEAD\ Agent/BEAD\ Agent.app/Contents/MacOS/BEAD\ Agent
+
+exit 0
