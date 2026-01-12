@@ -8,6 +8,9 @@ echo "Created By Selloyd"
 echo "Mounting Disk disk4"
 diskutil mountDisk /dev/disk4
 
+echo "Mounting Disk disk5"
+diskutil mountDisk /dev/disk5
+
 echo "Mounting Disk disk6"
 diskutil mountDisk /dev/disk6
 
