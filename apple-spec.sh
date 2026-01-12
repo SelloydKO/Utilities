@@ -30,7 +30,7 @@ tput reset
     sysctl -n machdep.cpu.brand_string;
 
     # Current Battery Percentage
-    system_profiler SPPowerDataType | grep - E "State"
+    system_profiler SPPowerDataType | grep -e "State"
 
 } | awk -F '[:=]' '{
     gsub(/^ +| +$/, "   ", $1);
