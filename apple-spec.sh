@@ -31,14 +31,14 @@ tput reset
     if [[ "$cpu_brand" =~ ^Apple\ M ]]; then
     {
         # M-series Info
-        echo "This is an M-series MacBook.";
+        echo "This is an M-series MacBook";
     }
     elif [[ "$cpu_brand" =~ Intel ]]; then
     hardware_info=$(system_profiler SPHardwareDataType 2>/dev/null)
     if echo "$hardware_info" | grep -q "iBridge"; then
     {
         # T2 info
-        echo "This is a T2 MacBook."
+        echo "This is a T2 MacBook"
         echo -e "\033[1mT2 Info:\033[0m";
         sysctl -n machdep.cpu.brand_string;
         ioreg -l | grep -e "AppleRawCurrentCapacity" -e "AppleRawMaxCapacity"
@@ -49,6 +49,9 @@ tput reset
     else
     echo "Unknown processor type."
     fi
+
+    # Battery Charge
+    system_profiler SPPowerDataType | grep -e "State";
 
 } | awk -F '[:=]' '{
     gsub(/^ +| +$/, "   ", $1);
