@@ -14,6 +14,12 @@ diskutil mountDisk /dev/disk5
 echo "Mounting Disk disk6"
 diskutil mountDisk /dev/disk6
 
+echo "Mounting Disk disk7"
+diskutil mountDisk /dev/disk7
+
+echo "Mounting Disk disk8"
+diskutil mountDisk /dev/disk8
+
 echo "Launching Application"
 /Volumes/BLANCCO/BEAD\ Agent/BEAD\ Agent.app/Contents/MacOS/BEAD\ Agent
 
