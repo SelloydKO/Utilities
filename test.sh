@@ -82,8 +82,4 @@ printf '%*s\n' "$total_width" '' | tr ' ' '*'
     print $1 ":" $2;
 }'
 
-
-echo -e "Created by \033[1mSelloyd\033[0m"
-
-
 exit 0
