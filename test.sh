@@ -7,6 +7,8 @@ tput reset
 #variables
 inner_width=58
 total_width=$((inner_width + 2))
+title="Apple full spec report"
+creator="- created by Selloyd Fernandes"
 
 # Top border
 printf '%*s\n' "$total_width" '' | tr ' ' '*'
@@ -15,13 +17,11 @@ printf '%*s\n' "$total_width" '' | tr ' ' '*'
 printf '*%*s*\n' "$inner_width" ''
 
 # Main title (perfectly centered)
-title="Apple Software Restore"
 title_len=${#title}
 left_title=$(((inner_width - title_len) / 2))
 printf '*%*s%s%*s*\n' "$left_title" '' "$title" "$left_title" ''
 
 # Creator/subtitle (perfectly centered)
-creator="- created by Selloyd Fernandes"
 creator_len=${#creator}
 left_creator=$(((inner_width - creator_len) / 2))
 printf '*%*s%s%*s*\n' "$left_creator" '' "$creator" "$left_creator" ''
