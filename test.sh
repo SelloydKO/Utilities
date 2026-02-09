@@ -1,6 +1,10 @@
 #!/bin/bash 
 # KOcycle Helper Script - get info for macs to fill out in Razor
 
+# Reset terminal to keep things clean
+tput reset
+
+#variables
 inner_width=58
 total_width=$((inner_width + 2))
 
@@ -28,9 +32,6 @@ printf '*%*s*\n' "$inner_width" ''
 # Bottom border
 printf '%*s\n' "$total_width" '' | tr ' ' '*'
 
-
-# Reset terminal to keep things clean
-tput reset
 
 # Collect and format system information
 {
