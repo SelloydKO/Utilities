@@ -56,6 +56,10 @@ printf '%*s\n' "$total_width" '' | tr ' ' '*'
     echo -e "\033[1mKeyboard Info:\033[0m";
     ioreg -l | grep "KeyboardLanguage";
 
+    # Battery Charge
+    echo -e "\033[1mBattery Charge:\033[0m";
+    system_profiler SPPowerDataType | grep -E "State"
+
 
     cpu_brand=$(sysctl -n machdep.cpu.brand_string 2>/dev/null)
     if [[ "$cpu_brand" =~ ^Apple\ M ]]; then
