@@ -8,7 +8,7 @@ tput reset
 inner_width=58
 total_width=$((inner_width + 2))
 title="Apple full spec report"
-creator="- created by Selloyd Fernandes"
+creator="- by Selloyd Fernandes"
 
 # Top border
 printf '%*s\n' "$total_width" '' | tr ' ' '*'
