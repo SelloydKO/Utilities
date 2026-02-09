@@ -65,7 +65,7 @@ printf '%*s\n' "$total_width" '' | tr ' ' '*'
     if [[ "$cpu_brand" =~ ^Apple\ M ]]; then
     {
         # M series Info
-        echo "This is an M-series MacBook";
+        echo "\033[1mThis is an M-series MacBook\033[0m";
         
     }
     elif [[ "$cpu_brand" =~ Intel ]]; then
@@ -73,18 +73,17 @@ printf '%*s\n' "$total_width" '' | tr ' ' '*'
     if echo "$hardware_info" | grep -q "iBridge"; then
     {
         # T2 info
-        echo "This is a Intel MacBook with T2 chip"
-        echo -e "\033[1mT2 Info:\033[0m";
+        echo "\033[1mThis is a Intel MacBook with T2 chip\033[0m"
         sysctl -n machdep.cpu.brand_string;
         ioreg -l | grep -e "AppleRawCurrentCapacity" -e "AppleRawMaxCapacity"
     }
     else
     {
-        echo "This is an Intel MacBook without T2 chip"
+        echo "\033[1mThis is an Intel MacBook without T2 chip\033[0m"
     }
     fi
     else
-        echo "Unknown processor type"
+        echo "\033[1mUnknown processor type\033[0m"
     fi
 
 } | awk -F '[:=]' '{
