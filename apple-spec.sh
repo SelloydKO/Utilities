@@ -11,7 +11,7 @@ total_width=$((inner_width + 2))
 title="Apple full spec report"
 creator="- by Selloyd Fernandes"
 bold_start="\033[1m"
-bold_end=":\033[0m"
+bold_end="\033[0m"
 
 # Top border
 printf '%*s\n' "$total_width" '' | tr ' ' '*'
@@ -67,7 +67,7 @@ printf '%*s\n' "$total_width" '' | tr ' ' '*'
     if [[ "$cpu_brand" =~ ^Apple\ M ]]; then
     {
         # M series Info
-        echo "\033[1mThis is an M-series MacBook:\033[0m";
+        echo -e bold_start + "This is a M-Series macbook" + bold_end ;
         
     }
     elif [[ "$cpu_brand" =~ Intel ]]; then
@@ -75,7 +75,7 @@ printf '%*s\n' "$total_width" '' | tr ' ' '*'
     if echo "$hardware_info" | grep -q "iBridge"; then
     {
         # T2 info
-        echo "\033[1mThis is a Intel MacBook with T2 chip:\033[0m"
+        echo -e bold_start + "This is a Intel MacBook with T2 chip" + bold_end ;
         sysctl -n machdep.cpu.brand_string;
         ioreg -l | grep -e "AppleRawCurrentCapacity" -e "AppleRawMaxCapacity"
     }
