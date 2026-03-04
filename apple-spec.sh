@@ -67,7 +67,7 @@ printf '%*s\n' "$total_width" '' | tr ' ' '*'
     if [[ "$cpu_brand" =~ ^Apple\ M ]]; then
     {
         # M series Info
-        echo -e $bold_start + "This is a M-Series macbook" + $bold_end ;
+        echo -e $bold_start "This is a M-Series macbook" $bold_end ;
         ioreg -l | grep -e "AppleRawCurrentCapacity" -e "AppleRawMaxCapacity"
     }
     elif [[ "$cpu_brand" =~ Intel ]]; then
@@ -75,7 +75,7 @@ printf '%*s\n' "$total_width" '' | tr ' ' '*'
     if echo "$hardware_info" | grep -q "iBridge"; then
     {
         # T2 info
-        echo -e $bold_start + "This is a Intel MacBook with T2 chip" + $bold_end ;
+        echo -e $bold_start "This is a Intel MacBook with T2 chip" $bold_end ;
         sysctl -n machdep.cpu.brand_string;
         ioreg -l | grep -e "AppleRawCurrentCapacity" -e "AppleRawMaxCapacity"
     }
